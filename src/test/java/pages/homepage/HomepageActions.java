@@ -1,37 +1,34 @@
 package pages.homepage;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.BasePage;
 
-import java.time.Duration;
 
 import static pages.homepage.HomepageSelector.*;
+
 public class HomepageActions extends BasePage {
 
     public HomepageActions(WebDriver driver) {
         super(driver);
     }
 
-    public void slideRightSlider(){
+    public void slideRightSlider() {
         clickElement(driver.findElement(RIGHT_SLIDER_ARROW));
     }
 
-    public void slideLeftSlider(){
+    public void slideLeftSlider() {
         clickElement(driver.findElement(LEFT_SLIDER_ARROW));
     }
 
-    public void clickWomenCategory(){
+    public void clickWomenCategory() {
         clickElement(driver.findElement(CATEGORY_WOMEN));
     }
 
-    public void clickMenCategory(){
+    public void clickMenCategory() {
         clickElement(driver.findElement(CATEGORY_MEN));
     }
 
-    public void clickKidsCategory(){
+    public void clickKidsCategory() {
         clickElement(driver.findElement(CATEGORY_KIDS));
     }
 
@@ -153,7 +150,7 @@ public class HomepageActions extends BasePage {
         }
     }
 
-    public int getProductCardsCount(){
+    public int getProductCardsCount() {
         return driver.findElements(PRODUCTS).size();
     }
 

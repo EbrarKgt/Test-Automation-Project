@@ -11,11 +11,11 @@ public class HomepageChecks extends BasePage {
         super(driver);
     }
 
-    public void SliderRightArrowCheck(){
+    public void SliderRightArrowCheck() {
         isElementVisible(driver.findElement(RIGHT_SLIDER_ARROW));
     }
 
-    public void SliderLeftArrowCheck(){
+    public void SliderLeftArrowCheck() {
         isElementVisible(driver.findElement(LEFT_SLIDER_ARROW));
     }
 

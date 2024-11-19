@@ -14,7 +14,7 @@ public class ProductDetailsActions extends BasePage {
         super(driver);
     }
 
-    public void addToChart(){
+    public void addToChart() {
         clickElement(driver.findElement(ADD_TO_CART_BUTTON));
     }
 
@@ -22,26 +22,25 @@ public class ProductDetailsActions extends BasePage {
         actions.moveToElement(driver.findElement(QUANTITY_NUMBER)).clickAndHold().perform();
     }
 
-    public void decrementOfQuantity(){
-        if(Integer.parseInt(driver.findElement(QUANTITY_NUMBER).getText()) > 1){
+    public void decrementOfQuantity() {
+        if (Integer.parseInt(driver.findElement(QUANTITY_NUMBER).getText()) > 1) {
 
         }
-
     }
 
-    public int getPrice(){
+    public int getPrice() {
         return Integer.parseInt(driver.findElement(PRICE).getText());
     }
 
-    public String getBrand(){
+    public String getBrand() {
         return driver.findElement(BRAND).getText();
     }
 
-    public String getCondition(){
+    public String getCondition() {
         return driver.findElement(CONDITION).getText();
     }
 
-    public String getAvailability(){
+    public String getAvailability() {
         return driver.findElement(AVAILABILITY).getText();
     }
 

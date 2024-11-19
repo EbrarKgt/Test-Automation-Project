@@ -14,7 +14,7 @@ public class ProductDetailsChecks extends BasePage {
         super(driver);
     }
 
-    public void AddToChartButtonCheck(){
+    public void AddToChartButtonCheck() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(ADD_TO_CART_BUTTON));
         System.out.println("Buton tıklanabilir durumda.");
