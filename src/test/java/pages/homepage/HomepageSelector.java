@@ -1,10 +1,7 @@
 package pages.homepage;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
-import java.util.List;
-
-public class Selector {
+public class HomepageSelector {
 
     public static final By SLIDER_XPATH = By.xpath("//*[@id='slider-carousel']");
     public static final By RIGHT_SLIDER_ARROW = By.xpath("//*[@id=\"slider-carousel\"]/a[2]");

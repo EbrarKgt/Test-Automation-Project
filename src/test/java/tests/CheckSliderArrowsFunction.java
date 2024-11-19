@@ -7,8 +7,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import pages.homepage.Actions;
-import pages.homepage.Checks;
+import pages.homepage.HomepageActions;
+import pages.homepage.HomepageChecks;
 
 import java.time.Duration;
 
@@ -16,8 +16,8 @@ public class CheckSliderArrowsFunction {
 
     //This class ..
 
-    private Actions actions;
-    private Checks checks;
+    private HomepageActions homepageActions;
+    private HomepageChecks homepageChecks;
     private WebDriver driver;
 
     @Before
@@ -26,8 +26,8 @@ public class CheckSliderArrowsFunction {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-        checks = new Checks(driver);
-        actions = new Actions(driver);
+        homepageChecks = new HomepageChecks(driver);
+        homepageActions = new HomepageActions(driver);
         driver.get("http://automationexercise.com");
 
     }
@@ -41,15 +41,15 @@ public class CheckSliderArrowsFunction {
 
     @Test
     public void SliderArrowsCheck(){
-        checks.SliderRightArrowCheck();
-        checks.SliderLeftArrowCheck();
+        homepageChecks.SliderRightArrowCheck();
+        homepageChecks.SliderLeftArrowCheck();
     }
 
     @Test
     public void ProductCountCheck(){
-        int poloBrandProductCount = Integer.parseInt(actions.getPoloBrandCount());
-        actions.clickPoloBrand();
-        int displayedProducts = (actions.getProductCardsCount()) -1;
+        int poloBrandProductCount = Integer.parseInt(homepageActions.getPoloBrandCount());
+        homepageActions.clickPoloBrand();
+        int displayedProducts = (homepageActions.getProductCardsCount()) -1;
         Assert.assertEquals(poloBrandProductCount, displayedProducts);
     }
 }

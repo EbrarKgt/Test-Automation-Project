@@ -3,10 +3,10 @@ package pages.homepage;
 import org.openqa.selenium.WebDriver;
 import pages.BasePage;
 
-import static pages.homepage.Selector.*;
-public class Actions extends BasePage {
+import static pages.homepage.HomepageSelector.*;
+public class HomepageActions extends BasePage {
 
-    public Actions(WebDriver driver) {
+    public HomepageActions(WebDriver driver) {
         super(driver);
     }
 

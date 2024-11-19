@@ -3,11 +3,11 @@ package pages.homepage;
 import org.openqa.selenium.WebDriver;
 import pages.BasePage;
 
-import static pages.homepage.Selector.*;
+import static pages.homepage.HomepageSelector.*;
 
-public class Checks extends BasePage {
+public class HomepageChecks extends BasePage {
 
-    public Checks(WebDriver driver) {
+    public HomepageChecks(WebDriver driver) {
         super(driver);
     }
 
