@@ -1,11 +1,14 @@
 package pages.productDetails;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
 import pages.BasePage;
 
 import static pages.productDetails.ProductDetailsSelector.*;
 
 public class ProductDetailsActions extends BasePage {
+
+    Actions actions = new Actions(driver);
 
     public ProductDetailsActions(WebDriver driver) {
         super(driver);
@@ -13,6 +16,17 @@ public class ProductDetailsActions extends BasePage {
 
     public void addToChart(){
         clickElement(driver.findElement(ADD_TO_CART_BUTTON));
+    }
+
+    public void incrementOfQuantity() {
+        actions.moveToElement(driver.findElement(QUANTITY_NUMBER)).clickAndHold().perform();
+    }
+
+    public void decrementOfQuantity(){
+        if(Integer.parseInt(driver.findElement(QUANTITY_NUMBER).getText()) > 1){
+
+        }
+
     }
 
     public int getPrice(){

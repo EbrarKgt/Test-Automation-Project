@@ -8,7 +8,7 @@ public class ProductDetailsSelector {
     public static final By CATEGORY_NAME = By.xpath("//p[text()='Category: Women > Tops']");
     public static final By PRICE = By.xpath("//span[contains(text(), 'Rs.')]");
     public static final By QUANTITY_NUMBER = By.xpath("//input[@id='quantity']");
-    //public static final By QUANTITY_BUTTON = By.xpath("//input[@type='hidden']");
+    public static final By QUANTITY_BUTTON = By.xpath("//input[@name='product_id']");
     public static final By ADD_TO_CART_BUTTON = By.xpath("//button[@class='btn btn-default cart']");
     public static final By AVAILABILITY = By.xpath("//p[text() = ' In Stock']");
     public static final By CONDITION = By.xpath("//p[text() = ' New']");

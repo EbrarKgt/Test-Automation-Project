@@ -26,5 +26,6 @@ public class HomepageSelector {
     public static final By BRAND_BIBA = By.xpath("//a[text()='Biba']");
     public static final By BRAND_BIBA_COUNT = By.xpath("//a[text()='Biba']/span[@class='pull-right']");
     public static final By PRODUCTS = By.xpath("//div[@class='col-sm-4']");
+    public static final By VIEW_PRODUCTS = By.xpath("//a[contains(@href, '/product_details/')]");
 
 }
