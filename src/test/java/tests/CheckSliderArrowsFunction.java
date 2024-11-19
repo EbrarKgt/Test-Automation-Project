@@ -14,8 +14,6 @@ import java.time.Duration;
 
 public class CheckSliderArrowsFunction {
 
-    //This class ..
-
     private HomepageActions homepageActions;
     private HomepageChecks homepageChecks;
     private WebDriver driver;
