@@ -28,10 +28,6 @@ public class HomePageTestCases {
         homepageChecks = new HomepageChecks(driver);
         homepageActions = new HomepageActions(driver);
         driver.get("https://automationexercise.com/");
-        ((JavascriptExecutor) driver).executeScript(
-                "document.querySelectorAll('iframe, .ad, [id*=\"ad\"], [class*=\"ad\"]').forEach(el => el.style.display = 'none');"
-        );
-
     }
 
 
@@ -51,6 +47,7 @@ public class HomePageTestCases {
     public void EachProductCountCheck() {
         String[] brands = {"Polo", "H&M", "Madame", "Mast & Harbour", "Babyhug", "Allen Solly Junior", "Kookie Kids", "Biba"};
         for (String brand : brands) {
+            homepageActions.hideAds();
             int expectedBrandCount = Integer.parseInt(homepageActions.getEachBrandCount(brand));
             homepageActions.clickEachBrand(brand);
             int displayedProducts = (homepageActions.getProductCardsCount()) - 1;

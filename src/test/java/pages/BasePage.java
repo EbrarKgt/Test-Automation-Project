@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -34,5 +35,11 @@ public class BasePage {
         } catch (Exception e) {
             return false;
         }
+    }
+
+    public void hideAds() {
+        ((JavascriptExecutor) driver).executeScript(
+                "document.querySelectorAll('iframe, .ad, [id*=\"ad\"], [class*=\"ad\"]').forEach(el => el.style.display = 'none');"
+        );
     }
 }
