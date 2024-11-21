@@ -8,8 +8,10 @@ import org.junit.Test;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import pages.homepage.HomepageActions;
 import pages.homepage.HomepageChecks;
+import pages.productDetails.ProductDetailsActions;
 
 import java.time.Duration;
 
@@ -18,6 +20,9 @@ public class HomePageTestCases {
     private HomepageActions homepageActions;
     private HomepageChecks homepageChecks;
     private WebDriver driver;
+    private ProductDetailsActions productDetailsActions;
+
+
 
     @Before
     public void setUp() {
@@ -27,6 +32,7 @@ public class HomePageTestCases {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         homepageChecks = new HomepageChecks(driver);
         homepageActions = new HomepageActions(driver);
+        productDetailsActions = new ProductDetailsActions(driver);
         driver.get("https://automationexercise.com/");
     }
 
