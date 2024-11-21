@@ -42,4 +42,6 @@ public class BasePage {
                 "document.querySelectorAll('iframe, .ad, [id*=\"ad\"], [class*=\"ad\"]').forEach(el => el.style.display = 'none');"
         );
     }
+
+
 }
