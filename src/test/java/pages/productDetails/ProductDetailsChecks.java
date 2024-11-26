@@ -1,6 +1,7 @@
 package pages.productDetails;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.BasePage;
@@ -14,10 +15,9 @@ public class ProductDetailsChecks extends BasePage {
         super(driver);
     }
 
-    public void AddToChartButtonCheck() {
+    public boolean CheckAddToCartButtonClickability() {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.elementToBeClickable(ADD_TO_CART_BUTTON));
-        System.out.println("Buton tıklanabilir durumda.");
+        WebElement addToCartButton = wait.until(ExpectedConditions.elementToBeClickable(ADD_TO_CART_BUTTON));
+        return addToCartButton.isDisplayed();
     }
-
 }

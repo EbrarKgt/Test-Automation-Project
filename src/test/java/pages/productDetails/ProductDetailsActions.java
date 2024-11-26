@@ -18,7 +18,7 @@ public class ProductDetailsActions extends BasePage {
         clickElement(driver.findElement(ADD_TO_CART_BUTTON));
     }
 
-    public void incrementOfQuantity() {
+   /* public void incrementOfQuantity() {
         actions.moveToElement(driver.findElement(QUANTITY_NUMBER)).clickAndHold().perform();
     }
 
@@ -26,22 +26,21 @@ public class ProductDetailsActions extends BasePage {
         if (Integer.parseInt(driver.findElement(QUANTITY_NUMBER).getText()) > 1) {
 
         }
-    }
+    }*/
 
     public int getPrice() {
-        return Integer.parseInt(driver.findElement(PRICE).getText());
+        return Integer.parseInt(driver.findElement(PRICE).getText().replace("Rs. ","").trim());
     }
 
     public String getBrand() {
-        return driver.findElement(BRAND).getText();
+        return driver.findElement(BRAND).getText().replace("Brand: ", "").trim();
     }
 
     public String getCondition() {
-        return driver.findElement(CONDITION).getText();
+        return driver.findElement(CONDITION).getText().replace("Condition:", "").trim();
     }
 
     public String getAvailability() {
-        return driver.findElement(AVAILABILITY).getText();
+        return driver.findElement(AVAILABILITY).getText().replace("Availability:", "").trim();
     }
-
 }

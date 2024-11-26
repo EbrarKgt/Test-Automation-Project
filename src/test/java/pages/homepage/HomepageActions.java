@@ -1,8 +1,11 @@
 package pages.homepage;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import pages.BasePage;
 
+
+import java.util.List;
 
 import static pages.homepage.HomepageSelector.*;
 
@@ -31,70 +34,6 @@ public class HomepageActions extends BasePage {
     public void clickKidsCategory() {
         clickElement(driver.findElement(CATEGORY_KIDS));
     }
-
-//    public void clickPoloBrand(){
-//        clickElement(driver.findElement(BRAND_POLO));
-//    }
-//
-//    public String getPoloBrandCount(){
-//        return driver.findElement(BRAND_POLO_COUNT).getText().replaceAll("[^0-9]", "");
-//    }
-//
-//    public void clickHMBrand(){
-//        clickElement(driver.findElement(BRAND_HM));
-//    }
-//
-//    public String getHMBrandCount(){
-//        return driver.findElement(BRAND_HM_COUNT).getText().replaceAll("[^0-9]", "");
-//    }
-//
-//    public void clickMadameBrand(){
-//        clickElement(driver.findElement(BRAND_MADAME));
-//    }
-//
-//    public String getMADAMEBrandCount(){
-//        return driver.findElement(BRAND_MADAME_COUNT).getText().replaceAll("[^0-9]", "");
-//    }
-//
-//    public void clickMastAndHarbourBrand(){
-//        clickElement(driver.findElement(BRAND_MAST_AND_HARBOUR));
-//    }
-//
-//    public String getMastAndHarbourBrandCount(){
-//        return driver.findElement(BRAND_MAST_AND_HARBOUR_COUNT).getText().replaceAll("[^0-9]", "");
-//    }
-//
-//    public void clickBabyHugBrand(){
-//        clickElement(driver.findElement(BRAND_BABYHUG));
-//    }
-//
-//    public String getBabyHugBrandCount(){
-//        return driver.findElement(BRAND_BABYHUG_COUNT).getText().replaceAll("[^0-9]", "");
-//    }
-//
-//    public void clickAllenBrand(){
-//        clickElement(driver.findElement(BRAND_ALLEN));
-//    }
-//
-//    public String getAllenBrandCount(){
-//        return driver.findElement(BRAND_ALLEN_COUNT).getText().replaceAll("[^0-9]", "");
-//    }
-//
-//    public void clickKookieBrand(){
-//        clickElement(driver.findElement(BRAND_KOOKIE));
-//    }
-//
-//    public String getKookieBrandCount(){
-//        return driver.findElement(BRAND_KOOKIE_COUNT).getText().replaceAll("[^0-9]", "");
-//    }
-//
-//    public void clickBibaBrand(){
-//        clickElement(driver.findElement(BRAND_BIBA));
-//    }
-//
-//    public String getBibaBrandCount(){
-//        return driver.findElement(BRAND_BIBA_COUNT).getText().replaceAll("[^0-9]", "");
-//    }
 
     public void clickEachBrand(String brand) {
         switch (brand) {
@@ -154,4 +93,8 @@ public class HomepageActions extends BasePage {
         return driver.findElements(PRODUCTS).size();
     }
 
+    public void clickViewProductButton(){
+        List<WebElement> viewProductButtons = driver.findElements(VIEW_PRODUCTS);
+        clickElement(viewProductButtons.get(0));
+    }
 }
